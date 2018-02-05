@@ -1,4 +1,4 @@
-import {model} from './src/main';
+import { model } from './src/main';
 
 /*
  * export const ev = model(
@@ -16,14 +16,18 @@ import {model} from './src/main';
 
 // console.log(ev.event);
 export const event = (handler) => {
+    // document.addEventListener('DOMContentLoaded', handler)
+
     return model(
         'load',
-        document.addEventListener('DOMContentLoaded', handler)
+        handler
     );
 }
 
-// const DOMContentLoadedEvent = document.createEvent("Event");
+const DOMContentLoadedEvent = document.createEvent("Event");
 
-// dOMContentLoadedEvent.initEvent("DOMContentLoaded", true, true);
 
-// window.document.dispatchEvent(DOMContentLoadedEvent);
+document.addEventListener('DOMContentLoaded', (e) => {
+    console.log(e)
+});
+

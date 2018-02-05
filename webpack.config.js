@@ -9,6 +9,7 @@ const pjson = require('./package.json');
 var p = {}
 p['./dist/js/' + pjson.name + '.bundle.js'] = './src/js/main.js';
 p['./dist/js/dev/prova.bundle.js'] = './src/js/dev/prova.js';
+p['./dist/js/dev/prova1.bundle.js'] = './src/js/dev/prova1.js';
 p['./dev/dist/js/main.bundle.js'] = './dev/src/js/main.js';
 
 var css = {}
